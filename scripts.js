@@ -22,9 +22,7 @@ function getPlayerChoice() {
 function playRound(playerChoice, computerChoice) {
     console.log("player: " + playerChoice);
     console.log("computer: " + computerChoice);
-    if (playerChoice === "quit") {
-        return "lose";
-    }
+
     if (playerChoice === computerChoice) {
         return "tie";
     }
@@ -50,6 +48,9 @@ function playRound(playerChoice, computerChoice) {
             else if (computerChoice === "scissors") {
                 return "lose";
             }
+        case ("quit"): 
+            return "lose";
+        
     }
 }
 
