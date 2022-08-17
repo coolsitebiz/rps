@@ -1,2 +1,2 @@
 # rps
-CLI rock, paper, scissors
+rock, paper, scissors
