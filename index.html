@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./scripts.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Rock, Paper, Scissors</title>
-</head>
-<body>
-    <button onclick="game('rock')">ROCK</button>
-    <button onclick="game('paper')">PAPER</button>
-    <button onclick="game('scissors')">SCISSORS</button>
-    <div id="choice"></div>
-    <div id="results"></div>
-</body>
+  </head>
+  <body>
+    <div id="gameContainer">
+      <div id="game">
+        <div id="title">RPS.</div>
+        <div id="choices">
+          <div class="imgContainer">
+            <img
+              id="rock"
+              src="./img/rock.png"
+              onclick="game('rock')"
+              height="80%"
+            />
+          </div>
+          <div class="imgContainer">
+            <img
+              id="paper"
+              src="./img/paper.png"
+              onclick="game('paper')"
+              height="80%"
+            />
+          </div>
+          <div class="imgContainer">
+            <img
+              id="scissors"
+              src="./img/scissors.png"
+              onclick="game('scissors')"
+              height="80%"
+            />
+          </div>
+        </div>
+        <div id="output">
+          <div id="choice"></div>
+          <div id="results"></div>
+        </div>
+      </div>
+      <div id="scores">
+        <div id="scoresInsert">
+          <div id="playerScore">YOU: <span>0</span></div>
+          <div id="cpuScore">CPU: <span>0</span></div>
+        </div>
+      </div>
+      <div id="footer">
+        Images provided by&nbsp;<a href="https://logomakr.com/">Logo Makr</a>
+      </div>
+    </div>
+  </body>
 </html>
