@@ -28,6 +28,14 @@
   gap: 4em;
 }
 
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .imgContainer {
   opacity: 0.5;
 }
