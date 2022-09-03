@@ -54,6 +54,8 @@ function playRound(playerChoice) {
 resultsDiv.textContent = outcome.result;
 }
 
+
+// commented out to fix later
 // function game() {
 //   let score = [0, 0];
 //   let rounds = 0;
