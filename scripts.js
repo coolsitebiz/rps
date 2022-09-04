@@ -18,72 +18,67 @@ function playRound(playerChoice) {
 
   choiceDiv.textContent =`Computer chose ${outcome.compChoice.toUpperCase()}.`;
 
-  if (playerChoice === computerChoice) {
-    outcome.result = "tie";
-
-    resultsDiv.textContent = `Tie game!`;
-    console.log(outcome);
-    return outcome;
-  }
   switch (playerChoice) {
     case "rock":
       if (computerChoice === "scissors") {
         outcome.result = "You win!";
+        ++playerScore.textContent;
       } else if (computerChoice === "paper") {
         outcome.result = "You lose!";
+        ++cpuScore.textContent;
+      } else {
+        outcome.result = "Tie game!"
       }
-      console.log(outcome);
       break;
+
     case "scissors":
       if (computerChoice === "paper") {
         outcome.result = "You win!";
+        ++playerScore.textContent;
       } else if (computerChoice === "rock") {
         outcome.result = "You lose!";
+        ++cpuScore.textContent;
+      } else {
+        outcome.result = "Tie game!"
       }
-      console.log(outcome);
       break;
+
     case "paper":
       if (computerChoice === "rock") {
         outcome.result = "You win!";
+        ++playerScore.textContent;
       } else if (computerChoice === "scissors") {
         outcome.result = "You lose!";
+        ++cpuScore.textContent;
+      } else {
+        outcome.result = "Tie game!"
       }
-      console.log(outcome);
       break;
+  }
+
+  resultsDiv.textContent = outcome.result;
+
+  if(cpuScore.textContent > 4) {
+    alert(`You lose ${cpuScore.textContent} - ${playerScore.textContent}`);
+    cpuScore.textContent = 0;
+    playerScore.textContent = 0;
+    choiceDiv.textContent =``;
+    resultsDiv.textContent = ``;
+
+  }
+  if(playerScore.textContent > 4) {
+    alert(`You win ${playerScore.textContent} - ${cpuScore.textContent}`);
+    cpuScore.textContent = 0;
+    playerScore.textContent = 0;
+    choiceDiv.textContent =``;
+    resultsDiv.textContent = ``;
+
+  }
+
 }
-resultsDiv.textContent = outcome.result;
-}
 
 
-// commented out to fix later
-// function game() {
-//   let score = [0, 0];
-//   let rounds = 0;
-//   let resultsDiv = document.querySelector("#results");
-//   let choiceDiv = document.querySelector("#choice");
-//   let playerScore = document.querySelector("#playerScoreSpan");
-//   let cpuScore = document.querySelector("#cpuScoreSpan");
-//     let result = playRound(playerChoice, getComputerChoice());
-//     choiceDiv.textContent = `Computer chose ${result.compChoice.toUpperCase()}.`;
-//     if (result.result === "win") {
-//       resultsDiv.textContent = `You win!`;
-//       playerScore.textContent = ++score[0];
-//     } else if (result.result === "lose") {
-//       resultsDiv.textContent = `You lose!`;
-//       cpuScore.textContent = ++score[1];
-//     } else {
-//       resultsDiv.textContent = `Tie game!`;
-//     }
-//     rounds++;
-//   }
-  
 
-  // if (score[0] === score[1]) {
-  //     console.log("TIE GAME");
-  // } else if (score[0] > score[1]) {
-  //     console.log("You win!");
-  // } else {
-  //     console.log("CPU wins!");
-  // }
+
 
 
