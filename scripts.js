@@ -60,24 +60,23 @@ function playRound(playerChoice) {
 
   if(cpuScore.textContent > 4) {
     alert(`You lose ${cpuScore.textContent} - ${playerScore.textContent}`);
-    cpuScore.textContent = 0;
-    playerScore.textContent = 0;
-    choiceDiv.textContent =``;
-    resultsDiv.textContent = ``;
+    resetScores(cpuScore, playerScore, choiceDiv, resultsDiv);
 
   }
   if(playerScore.textContent > 4) {
     alert(`You win ${playerScore.textContent} - ${cpuScore.textContent}`);
-    cpuScore.textContent = 0;
-    playerScore.textContent = 0;
-    choiceDiv.textContent =``;
-    resultsDiv.textContent = ``;
+    resetScores(cpuScore, playerScore, choiceDiv, resultsDiv);
 
   }
 
 }
 
-
+function resetScores(cpuScore, playerScore, choiceDiv, resultsDiv) {
+  cpuScore.textContent = 0;
+  playerScore.textContent = 0;
+  choiceDiv.textContent = "";
+  resultsDiv.textContent = "";
+}
 
 
 
